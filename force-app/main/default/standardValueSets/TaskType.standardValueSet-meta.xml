@@ -7,11 +7,6 @@
         <label>Call</label>
     </standardValue>
     <standardValue>
-        <fullName>Other</fullName>
-        <default>false</default>
-        <label>Other</label>
-    </standardValue>
-    <standardValue>
         <fullName>Email</fullName>
         <default>false</default>
         <label>Email</label>
@@ -20,15 +15,5 @@
         <fullName>SMS</fullName>
         <default>false</default>
         <label>SMS</label>
-    </standardValue>
-    <standardValue>
-        <fullName>ContactForm</fullName>
-        <default>false</default>
-        <label>Contact Form</label>
-    </standardValue>
-    <standardValue>
-        <fullName>JobFair</fullName>
-        <default>false</default>
-        <label>Job Fair</label>
     </standardValue>
 </StandardValueSet>

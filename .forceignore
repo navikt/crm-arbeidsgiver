@@ -6,6 +6,7 @@
 
 # NOTE!! Do NOT use **/ before
 !unpackagable/profiles/*
+!unpackagable/objects/*
 # NOTE!! Do NOT use **/ before
 
 
@@ -33,9 +34,11 @@
 # translations
 # ----------------------------------------------------------------------------------------
 **/translations/en_US.translation-meta.xml
+**/tanslations/no.translation-meta.xml
 **/objectTranslations/*-en_US
 !**/objectTranslations/Opportunity-en_US
 !**/objectTranslations/CustomOpportunity__c-en_US
+
 
 
 # bugs (cannot be pushed)

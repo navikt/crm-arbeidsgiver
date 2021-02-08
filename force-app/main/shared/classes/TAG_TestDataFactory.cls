@@ -31,6 +31,7 @@ public without sharing class TAG_TestDataFactory {
 			Account acc = new Account();
 			acc.Name = 'test';
 			acc.INT_OrganizationNumber__c = '9000000000';
+			acc.INT_MunicipalityNumber__c = '3005';
 
 			accounts.add( acc );
 		}
@@ -38,6 +39,24 @@ public without sharing class TAG_TestDataFactory {
 		insert accounts;
 
 		return accounts;
+	}
+
+	public static List<Contact> createContacts( List<Account> accounts, Integer amountPerAccount ) {
+
+		List<Contact> contacts = new List<Contact>();
+		for ( Account acc:accounts ) {
+			for ( Integer i = 1; i <= amountPerAccount; i++ ) {
+				contacts.add( new Contact(
+								  FirstName = 'Contact',
+								  LastName = String.valueOf( i ),
+								  AccountId = acc.Id,
+								  TAG_Informed__c = true
+								  ) );
+			}
+		}
+		insert contacts;
+
+		return contacts;
 	}
 
 	public static User createStandardUser( String lastName ) {
@@ -59,6 +78,18 @@ public without sharing class TAG_TestDataFactory {
 		insert user;
 
 		return user;
+	}
+
+	public static void createUserWithPermset( String lastName, List<String> permsetNames ) {
+
+		User u = TAG_TestDataFactory.createStandardUser( lastName );
+
+		List<PermissionSet> permsets = [SELECT Id FROM PermissionSet WHERE Name IN : permsetNames];
+		List<PermissionSetAssignment> assignemnts = new List<PermissionSetAssignment>();
+		for ( PermissionSet ps : permsets ) {
+			assignemnts.add( new PermissionSetAssignment( AssigneeId = U.id, PermissionSetId = ps.Id ) );
+		}
+		insert assignemnts;
 	}
 
 	public static void createUserWithPermset( String lastName, String permset ) {

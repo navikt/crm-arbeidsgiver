@@ -17,24 +17,24 @@
                 <label>Ny henvendelse</label>
             </value>
             <value>
-                <fullName>Aktiv</fullName>
-                <default>false</default>
-                <label>Aktiv</label>
-            </value>
-            <value>
                 <fullName>Avklaring</fullName>
                 <default>false</default>
-                <label>Avklaring</label>
+                <label>Utforskes</label>
             </value>
             <value>
                 <fullName>Ferdig Avklart</fullName>
                 <default>false</default>
-                <label>Ferdig Avklart</label>
+                <label>Åpen for kandidater</label>
             </value>
             <value>
                 <fullName>Avsluttet</fullName>
                 <default>false</default>
                 <label>Avsluttet</label>
+            </value>
+            <value>
+                <fullName>Aktiv</fullName>
+                <default>false</default>
+                <label>Aktiv</label>
             </value>
             <value>
                 <fullName>Ansvarlig tildelt</fullName>
